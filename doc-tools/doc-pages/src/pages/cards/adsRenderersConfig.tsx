@@ -11,7 +11,7 @@ function AdComponent() {
   return (
     <View
       style={{ backgroundColor: '#B695C0', padding: 10, alignSelf: 'stretch' }}>
-      <Text style={{ color: 'white' }}>😈🤑😈🤑😈🤑</Text>
+      <Text style={{ color: 'white' }} allowFontScaling={false}>😈🤑😈🤑😈🤑</Text>
     </View>
   );
 }
@@ -20,7 +20,7 @@ const adComponentSrc = `function AdComponent() {
   return (
     <View
       style={{ backgroundColor: 'purple', padding: 10, alignSelf: 'stretch' }}>
-      <Text style={{ color: 'white' }}>😈🤑😈🤑😈🤑</Text>
+      <Text style={{ color: 'white' }} allowFontScaling={false}>😈🤑😈🤑😈🤑</Text>
     </View>
   );
 }`;

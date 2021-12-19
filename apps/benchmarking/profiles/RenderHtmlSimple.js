@@ -46,7 +46,7 @@ export default class RenderHtmlSimple extends PureComponent {
   }
 
   renderTextNode(textNode, index) {
-    return <Text key={index}>{textNode.data}</Text>;
+    return <Text key={index} allowFontScaling={false}>{textNode.data}</Text>;
   }
 
   textTags = ['span', 'strong', 'em'];

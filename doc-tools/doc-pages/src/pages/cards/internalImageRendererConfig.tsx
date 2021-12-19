@@ -26,7 +26,7 @@ const CustomRenderer: CustomBlockRenderer = function CustomImageRenderer(
       <Renderer {...rendererProps} source={thumbnailSource} onPress={onPress} />
       <Modal visible={isModalOpen} onRequestClose={onModalClose}>
         <Renderer {...rendererProps} />
-        <Text>A full resolution image!</Text>
+        <Text allowFontScaling={false}>A full resolution image!</Text>
         <Button title="Close Modal" onPress={onModalClose} />
       </Modal>
     </View>

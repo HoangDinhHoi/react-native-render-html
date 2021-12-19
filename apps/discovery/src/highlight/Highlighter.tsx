@@ -77,7 +77,7 @@ function RenderLine({
       numberOfLines={clipLines ? 1 : undefined}
       lineBreakMode="tail"
       textBreakStrategy="simple"
-      style={lineStyle}>
+      style={lineStyle} allowFontScaling={false}>
       {line.map((n, i) =>
         React.createElement(RenderSimpleNode, { node: n, key: i })
       )}
@@ -88,7 +88,7 @@ function RenderLine({
   }
   return (
     <View style={styles.line}>
-      <Text style={lineNumberStyle}>{lineNumberFormatter(index + 1)}</Text>
+      <Text style={lineNumberStyle} allowFontScaling={false}>{lineNumberFormatter(index + 1)}</Text>
       {content}
     </View>
   );
@@ -98,7 +98,7 @@ function RenderSimpleNode({ node }: { node: SimpleNode }) {
   const { contentStylesheet } = useContext(highlighterStylesheetsContext);
   const className = node.className;
   return (
-    <Text style={className?.map((n) => contentStylesheet[n])}>{node.text}</Text>
+    <Text style={className?.map((n) => contentStylesheet[n])} allowFontScaling={false}>{node.text}</Text>
   );
 }
 
@@ -136,7 +136,7 @@ function Padding({
   const { backgroundColor, width } = lineNumberStyle;
   return (
     <Text
-      style={[showLineNumbers && { backgroundColor }, { height: value, width }]}
+      style={[showLineNumbers && { backgroundColor }, { height: value, width }]} allowFontScaling={false}
     />
   );
 }

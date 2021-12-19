@@ -44,12 +44,12 @@ function createSymbolicMarkerRenderer({
             justifyContent: 'flex-end'
           }
         ]}>
-        {!!prefix && <Text style={markerTextStyle}>{prefix}</Text>}
+        {!!prefix && <Text style={markerTextStyle} allowFontScaling={false}>{prefix}</Text>}
         {React.createElement(Component, {
           ...(markerTextStyle as any),
           index: counterIndex
         })}
-        {!!suffix && <Text style={markerTextStyle}>{suffix}</Text>}
+        {!!suffix && <Text style={markerTextStyle} allowFontScaling={false}>{suffix}</Text>}
       </View>
     );
   };

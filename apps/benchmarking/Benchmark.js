@@ -8,7 +8,7 @@ import useBenchmark from './useBenchmark';
 function Benchmarks({ benchmarks }) {
   return (
     <View>
-      <Text>
+      <Text allowFontScaling={false}>
         Average Time to Render:{'\n'}
         {benchmarks.map((e) => `${e.name}: ${mean(e.values).toFixed(2)}ms\n`)}
       </Text>
@@ -46,7 +46,7 @@ export default function Benchmark({ samples, html, ignoredTags }) {
             benchmarks ? (
               <Benchmarks benchmarks={benchmarks} />
             ) : (
-              <Text>Waiting for benchmark to launch</Text>
+              <Text allowFontScaling={false}>Waiting for benchmark to launch</Text>
             ),
           WAIT_RUN: renderHtml,
           RUNNING: renderHtml

@@ -13,7 +13,7 @@ export default class RenderHtml extends PureComponent {
   textTags = ['span', 'strong', 'em'];
 
   renderTextNode(textNode, index) {
-    return <Text key={index}>{textNode.data}</Text>;
+    return <Text key={index} allowFontScaling={false}>{textNode.data}</Text>;
   }
 
   renderElement(element, index) {

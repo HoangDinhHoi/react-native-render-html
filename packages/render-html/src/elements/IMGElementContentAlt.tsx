@@ -27,7 +27,7 @@ export default function IMGElementContentAlt({
       accessibilityRole="image"
       accessibilityLabel={alt}
       testID={testID}>
-      <Text style={[styles.altText, { color: altColor }]}>{alt}</Text>
+      <Text style={[styles.altText, { color: altColor }]} allowFontScaling={false}>{alt}</Text>
       {children}
     </View>
   );

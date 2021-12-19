@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
 export function defaultRenderError(source: HTMLSourceUri) {
   return (
     <View testID="loader-error" style={styles.alignCenter}>
-      <Text style={styles.errorText}>
+      <Text style={styles.errorText} allowFontScaling={false}>
         Failed to load HTML from {source.uri}
       </Text>
     </View>

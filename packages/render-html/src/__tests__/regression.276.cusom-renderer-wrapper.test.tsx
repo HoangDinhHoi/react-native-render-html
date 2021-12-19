@@ -16,7 +16,7 @@ describe('RenderHTML component', () => {
     it('when provided, should use View wrapper to render a tag which has been defined in customRenderers and which default wrapper is Text', () => {
       const Span = () => (
         <View>
-          <Text>Tadad</Text>
+          <Text allowFontScaling={false}>Tadad</Text>
         </View>
       );
       const SpanRenderer: CustomBlockRenderer = () => (

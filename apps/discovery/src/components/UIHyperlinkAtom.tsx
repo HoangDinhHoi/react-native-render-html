@@ -18,7 +18,7 @@ export default function UIHyperlinkAtom({
   });
   return (
     <NativeViewGestureHandler>
-      <Text {...props} style={[props.style, textStyle]} children={children} />
+      <Text {...props} style={[props.style, textStyle]} children={children} allowFontScaling={false}/>
     </NativeViewGestureHandler>
   );
 }
